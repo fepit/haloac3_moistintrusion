@@ -233,7 +233,7 @@ def H2Ocourtain(w_time_s, alt, data, full_date, file_name, lat, lon):
     
     setup_axes_for_courtains(ax, w_time_s, lat, lon)
     
-    plot_dir = '/users/fpithan/haloac3_paper/'
+    plot_dir = '/users/fpithan/Documents/haloac3_paper/'
     pngfile = "{0}_wvmr.png".format(file_name)
     fig.savefig(plot_dir+pngfile, dpi = 300, bbox_inches = 'tight')
     plt.show()
@@ -263,7 +263,7 @@ def spec_humcourtain(w_time_s, alt, data, full_date, file_name, lat, lon):
     
     setup_axes_for_courtains(ax, w_time_s, lat, lon)
     
-    plot_dir = '/users/fpithan/haloac3_paper/'
+    plot_dir = '/users/fpithan/Documents/haloac3_paper/'
     pngfile = "{0}_spechum.png".format(file_name)
     fig.savefig(plot_dir+pngfile, dpi = 300, bbox_inches = 'tight')
     plt.show()
@@ -295,7 +295,7 @@ def spec_hum_anomcourtain(w_time_s, alt, data, full_date, file_name, lat, lon):
     
     setup_axes_for_courtains(ax, w_time_s, lat, lon)
     
-    plot_dir = '/users/fpithan/haloac3_paper/'
+    plot_dir = '/users/fpithan/Documents/haloac3_paper/'
     pngfile = "{0}_spechum_anom.png".format(file_name)
     fig.savefig(plot_dir+pngfile, dpi = 300, bbox_inches = 'tight')
     plt.show()
@@ -326,7 +326,7 @@ def spec_hum_relanomcourtain(w_time_s, alt, data, full_date, file_name, lat, lon
     
     setup_axes_for_courtains(ax, w_time_s, lat, lon)
     
-    plot_dir = '/users/fpithan/haloac3_paper/'
+    plot_dir = '/users/fpithan/Documents/haloac3_paper/'
     pngfile = "{0}_spechum_relanom.png".format(file_name)
     fig.savefig(plot_dir+pngfile, dpi = 300, bbox_inches = 'tight')
     plt.show()
@@ -412,7 +412,7 @@ def plot_q_anom_sec(w_lon, w_alt, data, sections, w_time_s, w_lat, full_date, fi
         
         setup_axes_for_section_courtains(ax, secs_section, lat_section, lon_section)        
 
-        plot_dir = '/users/fpithan/haloac3_paper/'
+        plot_dir = '/users/fpithan/Documents/haloac3_paper/'
         pngfile = "{0}_spechum_anom_{1}.png".format(file_name, sec_name)
         fig.savefig(plot_dir+pngfile, dpi = 300, bbox_inches = 'tight')
         plt.show()
@@ -453,7 +453,7 @@ def plot_q_relanom_sec(w_lon, w_alt, data, sections, w_time_s, w_lat, full_date,
         
         setup_axes_for_section_courtains(ax, secs_section, lat_section, lon_section)        
 
-        plot_dir = '/users/fpithan/haloac3_paper/'
+        plot_dir = '/users/fpithan/Documents/haloac3_paper/'
         pngfile = "{0}_spechum_relanom_{1}.png".format(file_name, sec_name)
         fig.savefig(plot_dir+pngfile, dpi = 300, bbox_inches = 'tight')
         plt.show()
@@ -491,7 +491,7 @@ def flight_track_w_wvmr(w_time_s, file_name, w_lat, w_lon, wvmr_means, full_date
     cbar.ax.tick_params(labelsize=8)
     cbar.set_label('wvmr [ppm]', fontsize=8)
 
-    plot_dir = '/users/fpithan/haloac3_paper/'
+    plot_dir = '/users/fpithan/Documents/haloac3_paper/'
     pngfile = "{0}_track_wvmr.png".format(file_name)
     fig.savefig(plot_dir+pngfile, dpi = 300, bbox_inches = 'tight')
     plt.show()
@@ -515,7 +515,7 @@ def flight_track_w_wvmr_scat(w_time_s, file_name, w_lat, w_lon, wvmr_means, full
     cbar.ax.tick_params(labelsize=8)
     cbar.set_label('wvmr [ppm]', fontsize=8)
 
-    plot_dir = '/users/fpithan/haloac3_paper/'
+    plot_dir = '/users/fpithan/Documents/haloac3_paper/'
     pngfile = "{0}_track_wvmr_scat.png".format(file_name)
     fig.savefig(plot_dir+pngfile, dpi = 300, bbox_inches = 'tight')
     plt.show()
@@ -551,7 +551,7 @@ def flight_track_w_q(w_time_s, file_name, w_lat, w_lon, col_mean_q, full_date):
     cbar.ax.tick_params(labelsize=8)
     cbar.set_label('q [g/kg]', fontsize=8)
 
-    plot_dir = '/users/fpithan/haloac3_paper/'
+    plot_dir = '/users/fpithan/Documents/haloac3_paper/'
     pngfile = "{0}_track_q.png".format(file_name)
     fig.savefig(plot_dir+pngfile, dpi = 300, bbox_inches = 'tight')
     plt.show()
@@ -589,7 +589,7 @@ def flight_track_w_q_anom(w_time_s, file_name, w_lat, w_lon, col_mean_q_anom, fu
     cbar.ax.tick_params(labelsize=8)
     cbar.set_label('q [g/kg]', fontsize=8)
 
-    plot_dir = '/users/fpithan/haloac3_paper/'
+    plot_dir = '/users/fpithan/Documents/haloac3_paper/'
     pngfile = "{0}_track_q_anom.png".format(file_name)
     fig.savefig(plot_dir+pngfile, dpi = 300, bbox_inches = 'tight')
     plt.show()
@@ -624,7 +624,7 @@ def flight_track_w_q_max(w_time_s, file_name, w_lat, w_lon, col_max_q, full_date
     cbar.ax.tick_params(labelsize=8)
     cbar.set_label('q [g/kg]', fontsize=8)
 
-    plot_dir = '/users/fpithan/haloac3_paper/'
+    plot_dir = '/users/fpithan/Documents/haloac3_paper/'
     pngfile = "{0}_track_q_max.png".format(file_name)
     fig.savefig(plot_dir+pngfile, dpi = 300, bbox_inches = 'tight')
     plt.show()
@@ -670,7 +670,7 @@ def flight_track_w_wvmr_secs(w_time_s, file_name, w_lat, w_lon, wvmr_means, sect
         cbar.ax.tick_params(labelsize=8)
         cbar.set_label('wvmr [ppm]', fontsize=8)
     
-        plot_dir = '/users/fpithan/haloac3_paper/'
+        plot_dir = '/users/fpithan/Documents/haloac3_paper/'
         pngfile = "{0}_track_wvmr_{1}.png".format(file_name, sec_name)
         fig.savefig(plot_dir+pngfile, dpi = 300, bbox_inches = 'tight')
         plt.show()
@@ -714,7 +714,7 @@ def flight_track_w_q_secs(w_time_s, file_name, w_lat, w_lon, col_mean_q, section
         cbar.ax.tick_params(labelsize=8)
         cbar.set_label('q [g/kg]', fontsize=8)
     
-        plot_dir = '/users/fpithan/haloac3_paper/'
+        plot_dir = '/users/fpithan/Documents/haloac3_paper/'
         pngfile = "{0}_track_q_{1}.png".format(file_name, sec_name)
         fig.savefig(plot_dir+pngfile, dpi = 300, bbox_inches = 'tight')
         plt.show()
@@ -760,7 +760,7 @@ def flight_track_w_q_anom_secs(w_time_s, file_name, w_lat, w_lon, col_mean_q_ano
         cbar.ax.tick_params(labelsize=8)
         cbar.set_label('q [g/kg]', fontsize=8)
     
-        plot_dir = '/users/fpithan/haloac3_paper/'
+        plot_dir = '/users/fpithan/Documents/haloac3_paper/'
         pngfile = "{0}_track_q_anom_{1}.png".format(file_name, sec_name)
         fig.savefig(plot_dir+pngfile, dpi = 300, bbox_inches = 'tight')
         plt.show()
@@ -804,7 +804,7 @@ def flight_track_w_q_max_secs(w_time_s, file_name, w_lat, w_lon, col_max_q, sect
         cbar.ax.tick_params(labelsize=8)
         cbar.set_label('q [g/kg]', fontsize=8)
     
-        plot_dir = '/users/fpithan/haloac3_paper/'
+        plot_dir = '/users/fpithan/Documents/haloac3_paper/'
         pngfile = "{0}_track_q_max_{1}.png".format(file_name, sec_name)
         fig.savefig(plot_dir+pngfile, dpi = 300, bbox_inches = 'tight')
         plt.show()

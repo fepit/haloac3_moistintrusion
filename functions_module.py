@@ -216,7 +216,7 @@ def H2Ocourtain(w_time_s, alt, data, full_date, file_name, lat, lon):
     bounds = np.logspace(0, 4, 30)  
     
     fig, ax = plt.subplots(figsize=(14, 4))
-    plt.rc('font', size=18)
+    
 
     plt.pcolormesh(secs, alt/1000, np.flipud(np.rot90(data,1)),
                    shading = 'auto', cmap = make_cmap(), norm=colors.LogNorm(vmin=1,vmax=10000))#,norm=colors.LogNorm())
@@ -246,7 +246,7 @@ def spec_humcourtain(w_time_s, alt, data, full_date, file_name, lat, lon):
     norm = colors.BoundaryNorm(boundaries=bounds, ncolors=256)
     
     fig, ax = plt.subplots(figsize=(15, 5))
-    plt.rc('font', size=18)
+    
 
     plt.pcolormesh(secs, alt/1000, np.flipud(np.rot90(data,1)),
                    shading = 'auto', cmap = make_cmap(), norm=norm)#,norm=colors.LogNorm())
@@ -274,7 +274,7 @@ def spec_hum_anomcourtain(w_time_s, alt, data, full_date, file_name, lat, lon):
     
     
     fig, ax = plt.subplots(figsize=(15, 5))
-    plt.rc('font', size=18)
+    
     v = np.nanpercentile(np.abs(data), 95)
     norm = SymLogNorm(linthresh=0.02, linscale=1.0, vmin=-v, vmax=v, base=10)
     plt.pcolormesh(secs, alt/1000, np.flipud(np.rot90(data,1)),
@@ -305,7 +305,7 @@ def spec_hum_relanomcourtain(w_time_s, alt, data, full_date, file_name, lat, lon
     secs = mdates.date2num(np.array(w_time_s, dtype='datetime64[s]'))
     
     fig, ax = plt.subplots(figsize=(15, 5))
-    plt.rc('font', size=18)
+    
     v = np.nanpercentile(np.abs(data), 95)
     norm = SymLogNorm(linthresh=0.1, linscale=1.0, vmin=-v, vmax=v, base=10)
     plt.pcolormesh(secs, alt/1000, np.flipud(np.rot90(data,1)),
@@ -340,7 +340,7 @@ def plot_q_sections(w_lon, w_alt, q, sections, w_time_s, w_lat, full_date, file_
 
     bounds = np.logspace(-3, 0.75, 30)
     norm = colors.BoundaryNorm(boundaries=bounds, ncolors=256)
-    plt.rc('font', size=18)
+    
 
     for sec_name, sec_info in sections.items():
         start_idx = sec_info['start_idx']
@@ -383,7 +383,7 @@ def plot_q_anom_sec(w_lon, w_alt, data, sections, w_time_s, w_lat, full_date, fi
        
     for sec_name, sec_info in sections.items():
         fig, ax = plt.subplots(figsize=(15, 5))
-        plt.rc('font', size=18)
+        
 
         start_idx = sec_info['start_idx']
         end_idx = sec_info['end_idx']
@@ -425,7 +425,7 @@ def plot_q_relanom_sec(w_lon, w_alt, data, sections, w_time_s, w_lat, full_date,
 
     for sec_name, sec_info in sections.items():
         fig, ax = plt.subplots(figsize=(15, 5))
-        plt.rc('font', size=18)
+        
         start_idx = sec_info['start_idx']
         end_idx = sec_info['end_idx']
         
@@ -463,7 +463,7 @@ def plot_q_relanom_sec(w_lon, w_alt, data, sections, w_time_s, w_lat, full_date,
 #Make plots projected on map
 
 def flight_track_w_wvmr(w_time_s, file_name, w_lat, w_lon, wvmr_means, full_date):
-    plt.rc('font', size=18)
+    
 
     fig= plt.figure(figsize=(10, 7))         
     ax = fig.add_subplot(1, 1, 1, projection=ccrs.AzimuthalEquidistant())
@@ -498,7 +498,7 @@ def flight_track_w_wvmr(w_time_s, file_name, w_lat, w_lon, wvmr_means, full_date
     plt.close()
 
 def flight_track_w_wvmr_scat(w_time_s, file_name, w_lat, w_lon, wvmr_means, full_date):
-    plt.rc('font', size=18)
+    
 
     fig= plt.figure(figsize=(10, 7))         
     ax = fig.add_subplot(1, 1, 1, projection=ccrs.AzimuthalEquidistant())
@@ -522,7 +522,7 @@ def flight_track_w_wvmr_scat(w_time_s, file_name, w_lat, w_lon, wvmr_means, full
     plt.close()
     
 def flight_track_w_q(w_time_s, file_name, w_lat, w_lon, col_mean_q, full_date):
-    plt.rc('font', size=18)
+    
 
     #Import terrain data
     fig= plt.figure(figsize=(10, 7))         
@@ -558,7 +558,7 @@ def flight_track_w_q(w_time_s, file_name, w_lat, w_lon, col_mean_q, full_date):
     plt.close()
 
 def flight_track_w_q_anom(w_time_s, file_name, w_lat, w_lon, col_mean_q_anom, full_date):
-    plt.rc('font', size=18)
+    
 
     fig= plt.figure(figsize=(10, 7))         
     ax = fig.add_subplot(1, 1, 1, projection=ccrs.AzimuthalEquidistant())
@@ -596,7 +596,7 @@ def flight_track_w_q_anom(w_time_s, file_name, w_lat, w_lon, col_mean_q_anom, fu
     plt.close()
 
 def flight_track_w_q_max(w_time_s, file_name, w_lat, w_lon, col_max_q, full_date):
-    plt.rc('font', size=18)
+    
 
     fig= plt.figure(figsize=(10, 7))         
     ax = fig.add_subplot(1, 1, 1, projection=ccrs.AzimuthalEquidistant())
@@ -641,7 +641,7 @@ def flight_track_w_wvmr_secs(w_time_s, file_name, w_lat, w_lon, wvmr_means, sect
         lon_section = w_lon[start_idx:end_idx+1]
         wvmr_means_section = wvmr_means[start_idx:end_idx+1]  
 
-        plt.rc('font', size=18)
+        
 
         fig= plt.figure(figsize=(10, 7))         
         ax = fig.add_subplot(1, 1, 1, projection=ccrs.AzimuthalEquidistant())
@@ -686,7 +686,7 @@ def flight_track_w_q_secs(w_time_s, file_name, w_lat, w_lon, col_mean_q, section
         lon_section = w_lon[start_idx:end_idx+1]
         col_mean_q_section = col_mean_q[start_idx:end_idx+1]  
 
-        plt.rc('font', size=18)
+        
 
         fig= plt.figure(figsize=(10, 7))         
         ax = fig.add_subplot(1, 1, 1, projection=ccrs.AzimuthalEquidistant())
@@ -733,7 +733,7 @@ def flight_track_w_q_anom_secs(w_time_s, file_name, w_lat, w_lon, col_mean_q_ano
         lon_section = w_lon[start_idx:end_idx+1]
         col_mean_q_anom_section = col_mean_q_anom[start_idx:end_idx+1]  
 
-        plt.rc('font', size=18)
+        
 
         fig= plt.figure(figsize=(10, 7))         
         ax = fig.add_subplot(1, 1, 1, projection=ccrs.AzimuthalEquidistant())
@@ -776,7 +776,7 @@ def flight_track_w_q_max_secs(w_time_s, file_name, w_lat, w_lon, col_max_q, sect
         lon_section = w_lon[start_idx:end_idx+1]
         col_max_q_section = col_max_q[start_idx:end_idx+1]  
 
-        plt.rc('font', size=18)
+        
 
         fig= plt.figure(figsize=(10, 7))         
         ax = fig.add_subplot(1, 1, 1, projection=ccrs.AzimuthalEquidistant())
